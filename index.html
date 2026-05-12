@@ -1,80 +1,203 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>가치를 올리는 디자이너 김현지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        body {
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #cc6666;
-            text-align: center;
-            color: #ffffff;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans KR", sans-serif;
         }
 
-        .container {
-            padding: 40px 20px;
+        section {
+            position: relative;
+            width: 1600px;
+            margin: 0 auto; 
+            min-height: 100vh;
+            background-color: skyblue;
+            padding: 100px;
+            display: flex;
+            justify-contant: space-between    
+            align-items: center;
+            
         }
 
-        h1 {
-            border: 2px solid #ffffff;
-            border-radius: 30px;
+        header {
+            position: absolute;   
+            top: 0;
+            left: 0;
+            width: 100%
+            padding: 20px 100px
+            display: flex;
+            justfy-content: space between;
+            align-items: center;
+        }
+        
+        header .logo {
+            positon: relative;
+            max-width: 80px;
+        }      
+
+        header ul {
+            position: relative;
+            display: flex;
+        }
+
+        header ul li {
+            list-style: none;
+
+        header ul li a {
             display: inline-block;
-            padding: 12px 30px;
-            margin-bottom: 20px;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 20px 0;
-            background-color: #eee;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        .button {
-            display: block;
-            width: 260px;
-            margin: 15px auto;
-            padding: 15px;
-            background-color: #e6ccff; /* 연보라 */
             color: #333;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            transition: 0.2s;
+            margin-left: 40px;
+            text-dicorate: none;
+        }
+        
+
+        .content {
+            position: relative
+            width: 100%;
+            displat: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .button:hover {
-            opacity: 0.85;
+        .content .textBox {
+            position:relative;
+            max-width: 600px;
+        }
+
+        .content .textBox h2 {
+            color:#333;
+            font-size: 4em;
+            line-height: 1.4em;
+            font-weight: 500;
+        }
+        .content .textBox h2 span {
+            color: #017143;
+            font-size: 1.2em;
+            font-weight: 900;
+        }
+        .content .textBox a {
+            display: inline-block;
+            margin-top: 20px;
+            padding; 8px 20px;
+            background: #017143
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decorate: none;
+        }
+
+        .content .imgBox {
+            width:600px;
+            background-color: orange;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+            margin-top: 50px;
+
+        }
+
+        .content .imgBox img{
+            max-width: : 340px;
+        }
+
+        .thumb {
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            left: 50%
+            transform: translateX(-50%)
+        }
+        .thumb li {
+            list-style: none;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: 300ms;
+        }
+        .thumb li:hover {
+            transform: translateY(-15px);
+        }
+        .thumb li img {
+            max-width: 60px;
+        }
+
+        .sci  {
+            position:absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .sci li {
+            list-style-type: style: none;
+        }
+        .circle {
+            position: abbsolute;
+            top; 0;
+            left: 0;
+            width: 50%
+            height: 50%
+            background-color: #017143;
+            clip-path: circle(600px at right 880px);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- 제목 -->
-        <h1>가치를 올리는 디자이너 김현지</h1>
 
-        <!-- 👇 제목 바로 아래로 이동 -->
-        <img src="images/스크린샷 2026-04-20 090614.png" alt="프로필 이미지" class="profile-img">
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="" class="logo"><img src="./imgs/logo.png" alt=""></a>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">What's New</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis culpa eum, soluta ab placeat, voluptas molestiae est excepturi consequatur aliquid voluptatibus enim qui tempore eaque voluptates dolores iusto iste nostrum.</p>
+                <a href="">Learn More</a>
+            </div>
 
-        <!-- 자기소개 -->
-        <p>
-            브랜드의 가치와 매력을 올리겠습니다.<br>
-            임팩트로 소비자를 사로잡도록 노력하겠습니다.
-        </p>
+            <div class="imgBox">                                  
+                <img src="./imgs/img1.png" alt=""class="starb                                  ucks">
+            </div>  
+        </div>
+        <ul class="thumb">
+            <li><img src="./imgs/thumb1.png" alt=""onclick="imgSlider('./imgs/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="./imgs/thumb2.png" alt=""onclick="imgSlider('./imgs/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="./imgs/thumb3.png" alt=""onclick="imgSlider('./imgs/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href=""><img src="./imgs/facebook.png" alt=""></a></li>
+            <li><a href=""><img src="./imgs/twitter.png" alt=""></a></li>
+            <li><a href=""><img src="./imgs/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
 
-        <!-- 버튼 -->
-        <a href="#" class="button">Trend</a>
-        <a href="#" class="button">News</a>
-        <a href="#" class="button">Issue</a>
-    </div>
+    <script>
+        function imgSlider(anything) {
+            document.querySelctor('.starbucks').scr = anything;
+        }
+
+        function changeCircleColor() {
+            const circle = document.querySelector('circle');
+            circle.style.backgroundColor = color;
+        }
+         
+    </script>
 </body>
 </html>
